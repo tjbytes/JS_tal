@@ -21,6 +21,6 @@ for (i = 1; i <= 5; i++) {
 
 for (i = 0; i < arr2001.length; i++) {
   if (arr2001[i] > average) {
-    console.log(`Day ${i + 1}: ${arr2001[i]}°C`);
+    console.log(`Day ${i + 1} ${arr2001[i]}°C`);
   }
 }
