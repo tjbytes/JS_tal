@@ -1,14 +1,3 @@
-let number = +prompt("Enter a number:");
-let max = -1;
+let num1 = +prompt("Enter the first number:")
+let num2 = +prompt("Enter the second number:")
 
-while (number > 0) {
-  if (number > max) {
-    max = number;
-  }
-  number = +prompt("Enter a number:");
-}
-  if (max === -1) {
-    console.log("Enter some positive numbers");
-  } else {
-    console.log(`The highest number entered is: ${max}`);
-  }
