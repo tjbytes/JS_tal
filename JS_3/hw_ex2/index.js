@@ -5,7 +5,7 @@ function init() {
   const carOrigin = prompt("Enter car origin:");
   const MPG = +prompt("Enter desired miles per gallon:");
   const result = getCarsByOriginMpg(carOrigin, MPG, carsForSale);
-  console.log(result);
+  console.log(`Cars made in ${carOrigin} with ${MPG} miles per gallon:`,result);
 }
 
 function getCarsByOriginMpg(carOrigin, MPG, carsArray) {

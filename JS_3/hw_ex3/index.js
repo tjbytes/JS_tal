@@ -19,9 +19,9 @@ function init() {
 }
 
 function getCarByPropertyAndValue(property, value, carsArray) {
-  if (typeof property !== "string") return;
-  if (isNaN(value)) return;
-  if (!Array.isArray(carsArray)) return;
+  if (typeof property !== "string") return[];
+  if (isNaN(value)) return[];
+  if (!Array.isArray(carsArray)) return[];
 
   let carsFilter = [];
 
