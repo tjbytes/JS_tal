@@ -15,7 +15,7 @@ function init() {
 
   const result = getCarByPropertyAndValue(property, value, carsForSale);
 
-  console.log(`Matching cars with ${property} => ${value}`, result);
+  console.log(`Matching cars with ${property} <= ${value}`, result);
 }
 
 function getCarByPropertyAndValue(property, value, carsArray) {
