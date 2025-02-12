@@ -28,7 +28,7 @@ function getCarByPropertyAndValue(property, value, carsArray) {
   for (let index = 0; index < carsArray.length; index++) {
     let addCar = carsArray[index];
 
-    if (addCar[property] !== undefined && addCar[property] <= value) {
+    if (addCar[property] <= value) {
       carsFilter.push(addCar);
     }
   }
