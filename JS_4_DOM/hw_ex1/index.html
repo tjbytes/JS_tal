@@ -13,37 +13,53 @@
   </head>
   <body>
     <div class="container">
+      <select id="selectMenu">
+        <option value="Horsepower">Horsepower</option>
+        <option value="Acceleration">Acceleration</option>
+        <option value="Cylinders">Cylinders</option>
+        <option value="Weight_in_lbs">Weight in lbs</option>
+      </select>
+      <input type="text" id="searchInput" placeholder="Enter search here" />
       <button
-        onclick="loadTable(carsForRent)"
-        id="showRentalCars"
-        class="btn btn-primary"
-        style="margin-top: 10px"
+        onclick="searchCars()"
+        id="searchButton"
+        class="btn btn-secondary"
       >
-        Show Cars for Rent
-      </button>
-      <button
-        onclick="loadTable(carsForSale)"
-        id="showSaleCars"
-        class="btn btn-primary"
-        style="margin-top: 10px"
-      >
-        Show Cars For Sale
-      </button>
-      <button
-        onclick="loadTable([...carsForRent, ...carsForSale])"
-        id="showAllCars"
-        class="btn btn-primary"
-        style="margin-top: 10px"
-      >
-        Show All Cars
+        Search Now
       </button>
 
-      <table id="table-cars" class="table table-striped">
-        <thead>
-          <tr id="table-cars-headers"></tr>
-        </thead>
-        <tbody id="table-cars-body"></tbody>
-      </table>
+      <div id="filterContainer">
+        <button
+          onclick="loadTable(carsForRent)"
+          id="showRentalCars"
+          class="btn btn-primary"
+          style="margin-top: 10px"
+        >
+          Show Cars for Rent
+        </button>
+        <button
+          onclick="loadTable(carsForSale)"
+          id="showSaleCars"
+          class="btn btn-primary"
+          style="margin-top: 10px"
+        >
+          Show Cars For Sale
+        </button>
+        <button
+          onclick="loadTable([...carsForRent, ...carsForSale])"
+          id="showAllCars"
+          class="btn btn-primary"
+          style="margin-top: 10px"
+        >
+          Show All Cars
+        </button>
+        <table id="table-cars" class="table table-striped">
+          <thead>
+            <tr id="table-cars-headers"></tr>
+          </thead>
+          <tbody id="table-cars-body"></tbody>
+        </table>
+      </div>
     </div>
     <script src="data.js"></script>
     <script src="index.js"></script>

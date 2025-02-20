@@ -50,3 +50,16 @@ function getTD(value, defaultValue = "-") {
   return currentTD;
 }
 
+function searchCars() {
+  const searchTerm = document.getElementById("searchInput").value.toLowerCase();
+  const searchAttribute = document.getElementById("selectMenu").value;
+
+  const filteredCars = carsForRent.concat(carsForSale).filter(car => {
+    const valueToCheck = car[searchAttribute];
+    return (
+      (valueToCheck !== null ? valueToCheck.toString() : "").includes(searchTerm)
+    );
+  });
+
+  loadTable(filteredCars);
+}
